@@ -11,6 +11,7 @@ services:
       - DATABASE_URL=postgres://postgres:postgres@DB:5432/postgres
     volumes:
       - ./:/usr/src/app
+      - /usr/src/app/node_modules
   db:
     image: postgres:latest
     environment:
