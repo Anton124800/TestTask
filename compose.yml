@@ -6,12 +6,12 @@ services:
     ports:
       - 8080:8080
     depends_on:
-      - DB
+      - db
     environment:
       - DATABASE_URL=postgres://postgres:postgres@DB:5432/postgres
     volumes:
       - ./:/usr/src/app
-  DB:
+  db:
     image: postgres:latest
     environment:
       POSTGRES_USER: postgres
